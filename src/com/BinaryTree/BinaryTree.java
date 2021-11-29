@@ -47,4 +47,21 @@ Node root;
 		
 		return sizeAll(root.left) + sizeAll(root.right) + 1;
 	}
+	
+	public void search(int data) {
+		if(searchAll(root, data)) 
+			System.out.println(" Found the value searched");
+		else
+			System.out.println(" Value not present");		
+	}
+	
+	public boolean searchAll(Node root, int data) {
+		
+		if (root == null)
+			return false;
+		if(root.data == data) 
+			return true;
+		else		
+			return searchAll(root.left, data) || searchAll(root.right, data);
+	}
 }
