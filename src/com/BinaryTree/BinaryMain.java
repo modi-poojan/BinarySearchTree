@@ -8,6 +8,7 @@ public class BinaryMain {
 		call.insert(56);
 		call.insert(30);
 		call.insert(70);
+		call.size();
 	}
 	
 }
